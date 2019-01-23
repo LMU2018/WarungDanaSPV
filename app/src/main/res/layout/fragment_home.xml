@@ -8,19 +8,18 @@
 
 
     <!--<android.support.v4.widget.SwipeRefreshLayout-->
-        <!--android:id="@+id/pull"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
+    <!--android:id="@+id/pull"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
 
 
-       <!---->
+    <!---->
     <!--</android.support.v4.widget.SwipeRefreshLayout>-->
 
     <ScrollView
 
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
 
         <RelativeLayout
@@ -30,16 +29,15 @@
             <!--background-->
 
 
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="270dp"
                 android:background="@drawable/background" />
 
             <LinearLayout
-                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:orientation="vertical">
 
                 <!--toolbar-->
@@ -93,34 +91,271 @@
                     android:layout_height="200dp">
 
 
-
                     <ProgressBar
                         android:id="@+id/progressKPI"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true" />
 
                     <android.support.v7.widget.RecyclerView
-                        android:scrollbars="none"
                         android:id="@+id/recylerViewKPIOutlet"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none" />
 
 
+                </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Key Performance Index"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:text="Bulan ini"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/tvKPIDeskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#4b4b4b"
+                        android:textSize="14sp" />
 
 
                 </RelativeLayout>
 
 
 
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="5dp"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp">
+
+                            <LinearLayout
+                                android:id="@+id/layoutAwal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/brosurSum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#4b4b4b"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="Proses"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@+id/layoutTengah"
+                                android:layout_toEndOf="@id/layoutAwal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/teleSum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#4b4b4b"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="Approve"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutTengah"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/newDBSum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#4b4b4b"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="Cair"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@+id/layoutAkhir"
+                                android:layout_toEndOf="@+id/layoutTengah"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/orderSum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#4b4b4b"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="Reject"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutAkhir"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/bookingSum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#4b4b4b"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="Batal"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvSKRG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BULAN INI"
+                                android:textColor="#4b4b4b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvKMRN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="35dp"
+                                android:text="BULAN KMRN"
+                                android:textColor="#4b4b4b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSEMUA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="35dp"
+                                android:text="TOTAL"
+                                android:textColor="#4b4b4b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
                 <!--Aktivitas Hari Ini-->
 
                 <TextView
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/aktivitas_hari_ini"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp"
@@ -129,40 +364,45 @@
                 <!--TESSSSSS-->
 
 
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ProgressBar
                         android:id="@+id/progressAktivitas"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true" />
+
                     <LinearLayout
                         android:id="@+id/emptyLayout"
-                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
                         <ImageView
-                            android:src="@drawable/aktivitas_kosong"
                             android:layout_width="200dp"
                             android:layout_height="200dp"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:src="@drawable/aktivitas_kosong" />
+
                         <Button
                             android:id="@+id/tambahAktivitas"
-                            android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
-                            android:background="@drawable/tambah_jadwal_aktivitas"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content" />
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/tambah_jadwal_aktivitas" />
                     </LinearLayout>
+
                     <ImageView
                         android:id="@+id/koneksi"
-                        android:src="@drawable/cek_koneksi"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/cek_koneksi" />
+
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recylerViewAktivitas"
                         android:layout_width="wrap_content"
@@ -171,13 +411,12 @@
                 </RelativeLayout>
 
 
-
                 <!--Order Terbaru-->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:text="@string/order_terbaru"
                     android:textColor="@color/colorPrimaryDark"
@@ -189,17 +428,20 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:id="@+id/koneksi2"
-                        android:src="@drawable/cek_koneksi"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/cek_koneksi" />
+
                     <ProgressBar
                         android:id="@+id/progressOrder"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true" />
+
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recylerViewOrder"
                         android:layout_width="match_parent"
