@@ -154,6 +154,15 @@
                         android:orientation="vertical">
 
 
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/totalOrder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4b4b4b"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -168,7 +177,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/brosurSum"
+                                    android:id="@+id/prosesSum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -197,7 +206,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/teleSum"
+                                    android:id="@+id/ApproveSum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -226,16 +235,18 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/newDBSum"
+                                    android:id="@+id/CairSum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
+                                    android:gravity="center"
                                     android:text="0"
                                     android:textColor="#4b4b4b"
                                     android:textSize="24sp"
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:layout_gravity="center"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -254,7 +265,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/orderSum"
+                                    android:id="@+id/RejectSum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -283,7 +294,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/bookingSum"
+                                    android:id="@+id/BatalSum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"

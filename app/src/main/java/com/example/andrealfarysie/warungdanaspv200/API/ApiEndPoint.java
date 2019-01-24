@@ -71,6 +71,10 @@ public interface ApiEndPoint {
     @GET("spv_booking_counter")
     Call<RespCounterLead> bookingCounterOutlet(@Query("id_mst_outlet") Integer id);
 
+    @GET("spv_kpi_counter")
+    Call<RespCounterLead> spv_kpi_counter(@Query("id_mst_branch") Integer id_mst_branch,
+                                          @Query("id_order_mst_status") Integer id_order_mst_status);
+
     @GET("spv_activity_schedule_listing")
     Call<RespActivitySchedule> listActivitySchedule(@Query("id_cms_users") Integer idUser,
                                                     @Query("start_date") String startDate);
