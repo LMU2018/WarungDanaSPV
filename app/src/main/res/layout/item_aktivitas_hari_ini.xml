@@ -35,7 +35,7 @@
                 <ImageView
                     android:id="@+id/option"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_more_vert_black"
+                    android:background="@drawable/ic_more_vert_black_24dp_2"
                     android:layout_width="0dp"
                     android:layout_weight="0.1"
                     android:layout_height="wrap_content"

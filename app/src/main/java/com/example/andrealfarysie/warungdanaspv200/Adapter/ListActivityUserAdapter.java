@@ -1,5 +1,6 @@
 package com.example.andrealfarysie.warungdanaspv200.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,8 @@ import com.example.andrealfarysie.warungdanaspv200.Response.ListActivitySchedule
 import com.example.andrealfarysie.warungdanaspv200.Response.ListActivityUser;
 import com.example.andrealfarysie.warungdanaspv200.Response.RespListActivityUser;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,6 +42,19 @@ public class ListActivityUserAdapter extends RecyclerView.Adapter<ListActivityUs
         return new ListActivityUserAdapter.ListLeadHolder(view);
     }
 
+    private String convertTimeDay(String time) {
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format1 = new SimpleDateFormat("HH:mm");
+        java.util.Date date = null;
+        try {
+            date = format.parse(time);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String convertedDate = format1.format(date);
+        return convertedDate;
+    }
+
 
 
     @Override
@@ -48,7 +64,7 @@ public class ListActivityUserAdapter extends RecyclerView.Adapter<ListActivityUs
         holder.nama.setText(list.getCmsUsersName());
         if (list.getIdMstStatus()!=null){
             holder.status.setText(list.getStatus());
-            holder.tanggal.setText(list.getTanggal());
+            holder.tanggal.setText(convertTimeDay(list.getTanggal()));
         }else {
             holder.status.setText("Belum");
             holder.tanggal.setVisibility(View.GONE);

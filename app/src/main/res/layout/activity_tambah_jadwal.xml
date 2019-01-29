@@ -98,7 +98,7 @@
                     android:id="@+id/mulai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tanggal dan Jam Mulai"
+                    android:hint="Tanggal dan Jam Mulai (Klik 2x)"
                     android:editable="false"
                     />
             </android.support.design.widget.TextInputLayout>
@@ -113,7 +113,7 @@
                     android:id="@+id/selesai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Jam Selesai"
+                    android:hint="Jam Selesai (Klik 2x)"
                     android:editable="false" />
             </android.support.design.widget.TextInputLayout>
 
@@ -142,7 +142,7 @@
                     android:id="@+id/cfa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tambah CFA"
+                    android:hint="Tambah CFA (Klik 2x)"
                     android:editable="false"
                     />
             </android.support.design.widget.TextInputLayout>
